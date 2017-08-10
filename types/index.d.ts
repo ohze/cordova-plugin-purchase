@@ -12,6 +12,7 @@ declare namespace store {
         approved(callback: (product: IStoreProduct) => void): IWhen;
         error(callback: (err: IError, product: IStoreProduct) => void): IWhen;
         loaded(callback: (product: IStoreProduct) => void): IWhen;
+        valid(callback: (product: IStoreProduct) => void): IWhen;
         updated(callback: (product: IStoreProduct) => void): IWhen;
         owned(callback: (product: IStoreProduct) => void): IWhen;
         cancelled(callback: (product: IStoreProduct) => void): IWhen;
@@ -20,7 +21,6 @@ declare namespace store {
         unverified(callback: (product: IStoreProduct) => void): IWhen;
         downloading(callback: (product: IStoreProduct, progress: number, timeRemaining: number) => void): IWhen;
         downloaded(callback: (product: IStoreProduct) => void): IWhen;
-        verified(callback: (product: IStoreProduct) => void): IWhen;
     }
 
     export interface IValidatorCallback {
@@ -35,7 +35,6 @@ declare namespace store {
         NON_CONSUMABLE: StoreProductType;
         PAID_SUBSCRIPTION: StoreProductType;
         FREE_SUBSCRIPTION:  StoreProductType;
-        PAID_SUBSCRIPTION:  StoreProductType;
         NON_RENEWING_SUBSCRIPTION:  StoreProductType;
         CONSUMABLE;
 
@@ -55,7 +54,7 @@ declare namespace store {
         ready(callback: () => void): void;
         refresh(): void;
         off(callback: Function): void;
-        order(id: string): void;
+        order(id: string, additionalData?: any): void;
     }
 
     export type TransactionType = 'ios-appstore' | 'android-playstore';
