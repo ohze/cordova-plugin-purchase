@@ -33,8 +33,8 @@ SOFTWARE.
     <engines>
         <engine name="cordova" version=">=2.4.0" />
     </engines>
-    <repo>https://github.com/j3k0/cordova-plugin-purchase.git</repo>
-    <issue>https://github.com/j3k0/cordova-plugin-purchase/issues</issue>
+    <repo>https://github.com/ohze/cordova-plugin-purchase.git</repo>
+    <issue>https://github.com/ohze/cordova-plugin-purchase/issues</issue>
 
 	<license>MIT</license>
     <keywords>cordova,phonegap,purchase,storekit,ios,android,play,appstore,windows</keywords>

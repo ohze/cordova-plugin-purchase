@@ -10,9 +10,16 @@
       "wp8"
     ]
   },
+  "engines": {
+    "cordovaDependencies": {
+      "7.0.2": {
+        "cordova": ">100"
+      }
+    }
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/j3k0/cordova-plugin-purchase.git"
+    "url": "https://github.com/vinhbt/cordova-plugin-purchase"
   },
   "keywords": [
     "ecosystem:cordova",
